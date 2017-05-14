@@ -1,0 +1,26 @@
+header > img, footer > img {
+  width: 100%;
+}
+.nav {
+  width: 200px;
+  float: left;
+  border-right: 1px solid rgba(22, 33, 44, 0.2);
+}
+.tab-content {
+  float: left;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.clear-fix::before, .clear-fix::after {
+  content: "";
+  display: table;
+}
+.clear-fix::after {
+  clear: both;
+}
+footer {
+  margin-top: 100px;
+}
+.main-content {
+  min-height: 800px;
+}

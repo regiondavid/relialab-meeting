@@ -9,7 +9,7 @@
   </div>
   <div>
     <label for="text">Text</label>
-    <textarea name="text" id="text" cols="30" rows="10" placeholder="Create new item"></textarea>
+    <script id="container" name="text" type="text/plain"></script>
   </div>
   <div class="bt">
     <button type="submit">提交</button>
