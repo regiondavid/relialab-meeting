@@ -24,3 +24,23 @@ footer {
 .main-content {
   min-height: 800px;
 }
+.login-main {
+  width: 700px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
+.notice-list {
+  float: left;
+}
+.btn-submit {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.list-group, .admin-content {
+  width: 820px;
+}

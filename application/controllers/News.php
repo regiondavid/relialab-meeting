@@ -6,46 +6,48 @@ class News extends CI_Controller {
     $this->load->helper('url_helper');
   }
 
-  public function index() {
+  public function index($page=1) {
     $data['news'] = $this->news_model->get_news();
-    $data['title'] = 'News archive';
+    $data['count'] = $this->news_model->get_notice_count() /2;
+    $data['list'] = $this->news_model->get_notice_page($page);
+    $data['ref'] = "index";
 
-    $this->load->view('templates/header', $data);
+    $this->load->view('templates/header');
+    $this->load->view('templates/index-header');
     $this->load->view('news/index', $data);
+    $this->load->view('news/notice', $data);
+    $this->load->view('templates/pagination', $data);
+    $this->load->view('templates/index-footer');
     $this->load->view('templates/footer');
   }
 
-  public function view($slug = NULL) {
-    $data['news_item'] = $this->news_model->get_news($slug);
+  //展示文章
+  public function view($id) {
+
+    $data['news_item'] = $this->news_model->get_news($id);
 
     if(empty($data['news_item'])) {
       show_404();
     }
 
-    $data['title'] = $data['news_item']['title'];
-
-    $this->load->view('templates/header', $data);
+    $this->load->view('templates/header');
+    $this->load->view('templates/index-header');
     $this->load->view('news/view', $data);
+    $this->load->view('templates/index-footer');
     $this->load->view('templates/footer');
   }
 
-  public function create() {
-    $this->load->helper('form');
-    $this->load->library('form_validation');
-
-    $data['title'] = 'Create a item';
-
-    $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('text', 'Text', 'required');
-
-    if($this->form_validation->run() === FALSE) {
-      $this->load->view('templates/header', $data);
-      $this->load->view('news/create');
-      $this->load->view('templates/editorfooter');
-    }
-    else {
-      $this->news_model->set_news();
-      $this->load->view('news/success');
-    }
+  public function notice($page=1) {
+    $data['count'] = $this->news_model->get_notice_count() /2;
+    $data['list'] = $this->news_model->get_notice_page($page);
+    $data['ref'] = "index";
+    
+    $this->load->view('templates/header');
+    $this->load->view('templates/index-header');
+    $this->load->view('news/notice', $data);
+    $this->load->view('templates/pagination', $data);
+    $this->load->view('templates/index-footer');
+    $this->load->view('templates/footer');
   }
+
 }
