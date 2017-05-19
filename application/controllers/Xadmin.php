@@ -38,7 +38,7 @@ class Xadmin extends CI_Controller {
     $this->load->helper('form');
     $this->load->library('form_validation');
 
-    $this->form_validation->set_rules('title', 'Title', 'required');
+    $this->form_validation->set_rules('title', 'Title');
     $this->form_validation->set_rules('text', 'Text', 'required');
 
     $data['info'] = "发布";
