@@ -41,8 +41,14 @@ footer {
   left: 50%;
   transform: translateX(-50%);
 }
-.list-group, .admin-content {
+.admin-content {
   width: 55%;
+}
+.list-group {
+  width: 100%;
+}
+.list-group li:hover {
+  background-color: rgba(22, 33, 44, 0.1);
 }
 .tab-content .article-title {
   text-align: center;
