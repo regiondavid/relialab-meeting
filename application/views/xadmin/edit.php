@@ -6,7 +6,7 @@
   <form action= <?php echo "/xadmin/update/".$id ?> method="post">
     <div class="article-title form-group">
       <label for="title">标题：</label>
-      <input type="text" id="title" class="form-control" name="title" value=<?php echo $title ?> />
+      <input type="text" id="title" class="form-control" name="title" value=<?php echo $title ?>>
     </div>
     <div class="article-text form-group">
       <label for="container">内容：</label>
