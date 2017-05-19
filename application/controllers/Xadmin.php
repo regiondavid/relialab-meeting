@@ -7,17 +7,20 @@ class Xadmin extends CI_Controller {
 
   // 登录
   public function login() {
+    
+    //设置cookie
 
     $data['title'] = "login";
     $data['error'] = "";
     $this->load->view('templates/header');
     if(array_key_exists("action", $_POST) && $_POST['action']="post") {
       $login = $_POST;
-      if($login['uname'] != "coder") {
-        $data['error'] = "用户名或密码错误";
+      if($login['uname'] == "coder" && $login['upsd'] == "Admin123!") {
+        setcookie('username',$_POST['uname'],time()+60*60*24*1);
+        header('Location: /xadmin/show/12');
       }
       else {
-        header('Location: http://localhost:3333/xadmin/show/12');
+        $data['error'] = "用户名或密码错误";
       }
     }
     $this->load->view('xadmin/loginform', $data);
@@ -26,11 +29,15 @@ class Xadmin extends CI_Controller {
 
   //展示文章详情
   public function show($id = NULL) {
-    $this->load->view('templates/header');
-    $this->load->view('xadmin/sidebar');
-    $data = $this->news_model->get_news($id);
-    $this->load->view('xadmin/edit', $data);
-    $this->load->view('templates/editorfooter');
+    if(isset($_COOKIE['username']) && $_COOKIE['username'] == "coder"){
+      $this->load->view('templates/header');
+      $this->load->view('xadmin/sidebar');
+      $data = $this->news_model->get_news($id);
+      $this->load->view('xadmin/edit', $data);
+      $this->load->view('templates/editorfooter');
+    } else {
+      header('Location: /xadmin/login');
+    }
   }
 
   //发布新文章

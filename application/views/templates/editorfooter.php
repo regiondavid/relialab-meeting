@@ -8,6 +8,7 @@
     <script type="text/javascript">
         var ue = UE.getEditor('container');
     </script>
+    <script src="/assets/scripts/cl-lo.js"></script>
 </body>
 
 </html>

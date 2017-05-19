@@ -3,11 +3,11 @@
   <form action="/xadmin/login" method="post" class="form-horizontal">
     <div class="table-column form-group">
       <label for="name">用户名：</label>
-      <input type="text" name="uname" id="name">
+      <input type="text" name="uname" id="name" required="required">
     </div>
     <div class="table-column form-group">
       <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>    
-      <input type="text" name="upsd" id="password">
+      <input type="text" name="upsd" id="password" required="required">
     </div>
     <input type="hidden" value="post" name="action">
     <p class="error-info"><?php echo $error ?></p>

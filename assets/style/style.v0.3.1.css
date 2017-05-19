@@ -50,6 +50,6 @@ footer {
 .list-group li:hover {
   background-color: rgba(22, 33, 44, 0.1);
 }
-.tab-content .article-title {
+.tab-content .content-title {
   text-align: center;
 }
