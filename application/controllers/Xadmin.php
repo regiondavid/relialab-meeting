@@ -5,6 +5,11 @@ class Xadmin extends CI_Controller {
     $this->load->model('news_model');
   }
 
+  //默认访问跳转登录
+  public function index() {
+    header('Location: /xadmin/login');
+  }
+
   // 登录
   public function login() {
     
