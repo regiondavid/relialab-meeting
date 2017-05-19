@@ -2,14 +2,14 @@ header > img, footer > img {
   width: 100%;
 }
 .nav {
-  width: 200px;
+  width: 15%;
   float: left;
   border-right: 1px solid rgba(22, 33, 44, 0.2);
 }
 .tab-content {
   float: left;
-  margin-left: 100px;
-  margin-top: 50px;
+  margin-left: 60px;
+  margin-top: 25px;
 }
 .clear-fix::before, .clear-fix::after {
   content: "";
@@ -42,5 +42,8 @@ footer {
   transform: translateX(-50%);
 }
 .list-group, .admin-content {
-  width: 820px;
+  width: 55%;
+}
+.tab-content .article-title {
+  text-align: center;
 }
