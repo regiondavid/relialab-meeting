@@ -2,8 +2,8 @@ window.onload = function() {
   var loginbt = document.querySelector('.login-bt');
   var un = document.querySelector("input[name='uname']");
   var ps = document.querySelector("input[name='upsd']");
-  un.value = localStorage.un;
-  ps.value = localStorage.ps;
+  if(localStorage.un) un.value = localStorage.un;
+  if(localStorage.ps)ps.value = localStorage.ps;
   loginbt.onclick = function(e){
     e.preventDefault();
     localStorage.un = un.value;
