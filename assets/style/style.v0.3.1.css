@@ -90,6 +90,7 @@ footer {
   display: inline-block;
   margin-bottom: 20px;
   width: 800px;
+  color: #324057;
 }
 .news-li:hover {
   text-decoration: none;
