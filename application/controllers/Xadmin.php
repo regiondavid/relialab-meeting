@@ -47,23 +47,27 @@ class Xadmin extends CI_Controller {
 
   //发布新文章
   public function create() {
-    $this->load->helper('form');
-    $this->load->library('form_validation');
+    if(isset($_COOKIE['username']) && $_COOKIE['username'] == "coder"){
+      $this->load->helper('form');
+      $this->load->library('form_validation');
 
-    $this->form_validation->set_rules('title', 'Title');
-    $this->form_validation->set_rules('text', 'Text', 'required');
+      $this->form_validation->set_rules('title', 'Title');
+      $this->form_validation->set_rules('text', 'Text', 'required');
 
-    $data['info'] = "发布";
+      $data['info'] = "发布";
 
-    if($this->form_validation->run() === FALSE) {
-      $this->load->view('templates/header');
-      $this->load->view('xadmin/sidebar');
-      $this->load->view('xadmin/create');
-      $this->load->view('templates/editorfooter');
-    }
-    else {
-      $this->news_model->set_news();
-      $this->load->view('xadmin/success', $data);
+      if($this->form_validation->run() === FALSE) {
+        $this->load->view('templates/header');
+        $this->load->view('xadmin/sidebar');
+        $this->load->view('xadmin/create');
+        $this->load->view('templates/editorfooter');
+      }
+      else {
+        $this->news_model->set_news();
+        $this->load->view('xadmin/success', $data);
+      }
+    } else {
+      header('Location: /xadmin/login');
     }
   }
 
@@ -76,14 +80,18 @@ class Xadmin extends CI_Controller {
 
   //通知管理
   public function notice($page=1) {
-    $data['count'] = $this->news_model->get_notice_count() /2;
-    $data['list'] = $this->news_model->get_notice_page($page);
-    $data['ref'] = "admin";
-    $this->load->view('templates/header');
-    $this->load->view('xadmin/sidebar');
-    $this->load->view('xadmin/notice-list', $data);
-    $this->load->view('templates/pagination', $data);
-    $this->load->view('templates/footer');
+    if(isset($_COOKIE['username']) && $_COOKIE['username'] == "coder"){
+      $data['count'] = $this->news_model->get_notice_count() /2;
+      $data['list'] = $this->news_model->get_notice_page($page);
+      $data['ref'] = "admin";
+      $this->load->view('templates/header');
+      $this->load->view('xadmin/sidebar');
+      $this->load->view('xadmin/notice-list', $data);
+      $this->load->view('templates/pagination', $data);
+      $this->load->view('templates/footer');
+    } else {
+      header('Location: /xadmin/login');
+    }
   }
 
   //删除
