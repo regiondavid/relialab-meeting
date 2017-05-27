@@ -1,4 +1,4 @@
-<nav aria-label="Page navigation">
+<nav aria-label="Page navigation" class="page-nav">
   <ul class="pagination">
     <?php
       for($i=1;$i<$count+1;$i++) {
