@@ -88,14 +88,14 @@ footer {
 .bor-s{
   border-top: transparent dashed 17px;
   border-bottom: transparent dashed 17px;
-  border-left: #F7BA2A dashed 17px;
+  border-left: #337ab7 dashed 17px;
   display: inline-block;
 }
 .page-header > span.more-t {
   line-height: 34px;
   font-size: 18px;
   color: #fff;
-  background-color: #F7BA2A;
+  background-color: #337ab7;
   display: inline-block;
   vertical-align: top;
   padding-left: 1.5em;
