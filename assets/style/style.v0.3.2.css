@@ -14,9 +14,18 @@ header > img, footer > img {
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   font-family: "Microsoft Yahei";
+  background-color: #eef1f6;
 }
-.nav li:hover {
+.nav a{
+  color: #48576a;
+}
+.nav li:hover>a,.active > a {
   cursor: pointer;
+  background-color: #d1dbe5;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #d1dbe5;
+  color: #1D8CE0;
 }
 .tab-content {
   float: left;
@@ -73,20 +82,20 @@ footer {
   text-align: center;
 }
 .bor-s{
-  border-top: transparent dashed 25px;
-  border-bottom: transparent dashed 25px;
-  border-left: #F7BA2A dashed 25px;
+  border-top: transparent dashed 20px;
+  border-bottom: transparent dashed 20px;
+  border-left: #F7BA2A dashed 20px;
   display: inline-block;
 }
 .page-header > span.more-t {
-  line-height: 50px;
-  font-size: 26px;
+  line-height: 40px;
+  font-size: 20px;
   color: #fff;
   background-color: #F7BA2A;
   display: inline-block;
   vertical-align: top;
-  padding-left: 1em;
-  padding-right: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1em;
   font-weight: 600;
 }
 .news-li{
