@@ -40,6 +40,9 @@ footer {
   width: 1000px;
   margin: auto;
 }
+.main-content>div{
+  width: 800px;
+}
 .login-main {
   width: 700px;
   text-align: center;
