@@ -1,7 +1,7 @@
  </div>
  </div>
  <footer>
-      <img src="/assets/images/Bottombar.jpg" alt="">
+      <img src="/assets/images/Bottombar-2.jpg" alt="">
   </footer>
   <style type="text/css">
     html,body{margin:0;padding:0;}

@@ -1,5 +1,5 @@
   <header>
-      <img src="/assets/images/Headbar.jpg" alt="">
+      <img src="/assets/images/Headbar-2.jpg" alt="">
   </header>
   <div class="main-content clear-fix">
     <ul class="nav nav-pills nav-stacked" role="tablist">
