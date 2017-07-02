@@ -1,4 +1,4 @@
-<div class="admin-content tab-content">
+<div class="admin-content tab-content xadmin">
   <?php
   if($id<23)
     echo "<div class='page-header'><h2>".$type."</h2></div>";
