@@ -78,6 +78,7 @@ footer {
 }
 .admin-content {
   width: 800px;
+  padding-right: 10px;
 }
 .list-group {
   width: 100%;
