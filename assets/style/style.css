@@ -118,3 +118,9 @@ footer {
 .page-nav {
   text-align: center;
 }
+.xadmin {
+  margin-left: 0;
+  width: 850px;
+  padding-right: 30px;
+  padding-left: 20px;
+}

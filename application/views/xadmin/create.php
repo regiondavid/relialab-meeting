@@ -1,4 +1,4 @@
-<div class="admin-content tab-content">
+<div class="admin-content tab-content xadmin">
   <?php echo validation_errors(); ?>
   <?php echo form_open('xadmin/create'); ?>
     <div class="form-group">
