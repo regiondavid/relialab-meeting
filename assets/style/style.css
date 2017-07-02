@@ -5,7 +5,8 @@ body{
   background-color: #EFF2F7;
 }
 header{
-  width: 1000px;
+  width: 1020px;
+  min-width: 1020px;
   margin: auto;
 }
 header > img, footer > img {
@@ -44,12 +45,14 @@ header > img, footer > img {
 }
 footer {
   margin-top: 100px;
-  width: 1000px;
+  width: 1020px;
+  min-width: 1020px;
   margin: auto;
 }
 .main-content {
   min-height: 800px;
-  width: 1000px;
+  width: 1020px;
+  min-width: 1020px;
   margin: auto;
   background-color: #fff;
 }
