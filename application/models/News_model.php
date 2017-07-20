@@ -46,6 +46,7 @@ class News_model extends CI_Model {
 
   //获取分页
   public function get_notice_page($page=1) {
+    $this->db->order_by('publishtime', 'DESC');
     $this->db->select('id, title, publishtime');
     $this->db->where('type', 'notice');
     $this->db->from('news');
