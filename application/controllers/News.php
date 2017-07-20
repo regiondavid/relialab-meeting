@@ -40,8 +40,8 @@ class News extends CI_Controller {
   public function notice($page=1) {
     $data['count'] = $this->news_model->get_notice_count() /2;
     $data['list'] = $this->news_model->get_notice_page($page);
-    $data['ref'] = "index";
-    
+    $data['ref'] = "notice";
+
     $this->load->view('templates/header');
     $this->load->view('templates/index-header');
     $this->load->view('news/notice', $data);
