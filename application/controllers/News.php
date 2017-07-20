@@ -8,7 +8,7 @@ class News extends CI_Controller {
 
   public function index($page=1) {
     $data['news'] = $this->news_model->get_news();
-    $data['count'] = $this->news_model->get_notice_count() /2;
+    $data['count'] = $this->news_model->get_notice_count() /5;
     $data['list'] = $this->news_model->get_notice_page($page);
     $data['ref'] = "index";
 
@@ -38,7 +38,7 @@ class News extends CI_Controller {
   }
 
   public function notice($page=1) {
-    $data['count'] = $this->news_model->get_notice_count() /2;
+    $data['count'] = $this->news_model->get_notice_count() /5;
     $data['list'] = $this->news_model->get_notice_page($page);
     $data['ref'] = "notice";
 
