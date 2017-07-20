@@ -8,6 +8,7 @@
           echo "<li><a href='/news/index/".$i."'>".$i."</a></li>";
         } else if ($ref=="notice") {
           echo "<li><a href='/news/notice/".$i."'>".$i."</a></li>";
+        }
       }
     ?>
   </ul>
