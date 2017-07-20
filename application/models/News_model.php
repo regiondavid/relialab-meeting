@@ -50,7 +50,7 @@ class News_model extends CI_Model {
     $this->db->select('id, title, publishtime');
     $this->db->where('type', 'notice');
     $this->db->from('news');
-    $this->db->limit(2,($page-1)*2);
+    $this->db->limit(5,($page-1)*5);
     $query = $this->db->get();
     return $query->result_array();
   }
