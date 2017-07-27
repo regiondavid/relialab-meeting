@@ -3,10 +3,11 @@
   </div>
   <ul class="list-group">
   <?php foreach ($list as $key=>$item): ?>
-    if($key<2) {
+    <?php if($key<2): ?>
         <a class="news-li" href=<?php echo "/news/view/".$item['id'] ?>><li class="list-group-item"><?php echo "<span class='badge'>".$item['publishtime']."</span>".$item['title'] ?></li><span class="new-lable">new</span></a>
-    } else {
+    <?php endif; ?>
+    <?php if($key>=2): ?>
         <a class="news-li" href=<?php echo "/news/view/".$item['id'] ?>><li class="list-group-item"><?php echo "<span class='badge'>".$item['publishtime']."</span>".$item['title'] ?></li></a>
-    }
+    <?php endif; ?>
   <?php endforeach; ?>
   </ul>
