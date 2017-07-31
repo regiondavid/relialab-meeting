@@ -117,11 +117,8 @@ footer {
   text-decoration: none;
 }
 .news-li .new-label {
-    /*position: absolute;*/
-    /*right: -10px;*/
-    /*top: -10px;*/
     color: red;
-    margin-right: 2px;
+    margin-left: 5px;
 }
 .page-nav {
   text-align: center;
