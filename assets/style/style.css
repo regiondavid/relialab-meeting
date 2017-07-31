@@ -111,9 +111,17 @@ footer {
   margin-bottom: 20px;
   width: 800px;
   color: #324057;
+  position: relative;
 }
 .news-li:hover {
   text-decoration: none;
+}
+.news-li .new-label {
+    /*position: absolute;*/
+    /*right: -10px;*/
+    /*top: -10px;*/
+    color: red;
+    margin-right: 2px;
 }
 .page-nav {
   text-align: center;
